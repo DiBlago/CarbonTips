@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background: url(img/bgr.jpg) no-repeat center;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+  }
+}
+
+#top-image {
+  background: url(img/bgr.jpg) -25px -50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  height: 100%;
+  background-size: calc(100% + 200px);
+}
+
+@media screen and (max-width: 1024px) {
+  #top-image {
+    background-size: calc(100% + 50px);
+  }
+}
+
+.container-login form,
+.container-pass form {
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0% 8%;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .container-login form,
+  .container-pass form {
+    padding: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-login form,
+  .container-pass form {
+    width: 94%;
+  }
+}
+
+.container-login form .success,
+.container-login form .error,
+.container-pass form .success,
+.container-pass form .error {
+  color: #e8547e;
+  text-align: center;
+  font-weight: 300;
+  font-size: 15px;
+  padding-bottom: 5%;
+}
+
+.container-login form .logo,
+.container-pass form .logo {
+  width: 258px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 8%;
+  margin-top: 9%;
+}
+
+.container-login form .logo img,
+.container-pass form .logo img {
+  width: 100%;
+}
+
+.container-login fieldset,
+.container-pass fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@media screen and (max-width: 480px) {
+  .container-login fieldset,
+  .container-pass fieldset {
+    width: 100%;
+  }
+}
+
+.container-login fieldset .check,
+.container-pass fieldset .check {
+  text-align: center;
+}
+
+.container-login fieldset .check input[type=checkbox],
+.container-pass fieldset .check input[type=checkbox] {
+  display: none;
+}
+
+.container-login fieldset .check input[type="checkbox"] + label,
+.container-pass fieldset .check input[type="checkbox"] + label {
+  position: relative;
+}
+
+.container-login fieldset .check input[type="checkbox"] + label span,
+.container-pass fieldset .check input[type="checkbox"] + label span {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ededed;
+  margin-top: -2px;
+  position: relative;
+  margin-right: 6px;
+}
+
+.container-login fieldset .check input[type="checkbox"]:checked + label span,
+.container-pass fieldset .check input[type="checkbox"]:checked + label span {
+  /* <-- style its checked state */
+  background-image: url(img/check.png);
+  width: 16px;
+  height: 16px;
+}
+
+.container-login fieldset .form-group,
+.container-pass fieldset .form-group {
+  margin: 0 auto;
+  margin-bottom: 5%;
+  width: 400px;
+}
+
+@media screen and (max-width: 480px) {
+  .container-login fieldset .form-group,
+  .container-pass fieldset .form-group {
+    width: 100%;
+  }
+}
+
+.container-login fieldset .form-group input,
+.container-pass fieldset .form-group input {
+  background-color: #ededed;
+  width: 100%;
+  border-radius: 35px;
+  outline: none;
+  line-height: 1;
+  font-size: 18px;
+  border: none;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 6%;
+}
+
+@media screen and (max-width: 600px) {
+  .container-login fieldset .form-group input,
+  .container-pass fieldset .form-group input {
+    font-size: 16px;
+  }
+}
+
+.container-login fieldset .form-group .checkbox,
+.container-pass fieldset .form-group .checkbox {
+  margin: 0;
+  display: inline-block;
+  width: initial;
+}
+
+.container-login fieldset .form-group .checkbox[type=checkbox],
+.container-pass fieldset .form-group .checkbox[type=checkbox] {
+  vertical-align: middle;
+  width: initial;
+}
+
+.container-login fieldset .form-group label,
+.container-pass fieldset .form-group label {
+  display: inline-block;
+  width: initial;
+  font-weight: 300;
+  color: #696969;
+}
+
+.container-login fieldset .send,
+.container-pass fieldset .send {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 5%;
+  border-radius: 35px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: 23px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: #e64f4b;
+    -webkit-transition: background-color 300ms ease-out;
+    -moz-transition: background-color 300ms ease-out;
+    -o-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+  /*background: -moz-linear-gradient(left, #ffa85b 0%, #e8547e 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #ffa85b), color-stop(100%, #e8547e));
+  background: -webkit-linear-gradient(left, #ffa85b 0%, #e8547e 100%);
+  background: -o-linear-gradient(left, #ffa85b 0%, #e8547e 100%);
+  background: -ms-linear-gradient(left, #ffa85b 0%, #e8547e 100%);
+  background: linear-gradient(to right, #ffa85b 0%, #e8547e 100%);*/
+}
+
+.container-login fieldset .send:hover,
+.container-pass fieldset .send:hover {
+    background-color: #3498db;
+  /*background: -moz-linear-gradient(left, #e53b6c 0%, #ff9e43 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #e53b6c), color-stop(100%, #ff9e43));
+  background: -webkit-linear-gradient(left, #e53b6c 0%, #ff9e43 100%);
+  background: -o-linear-gradient(left, #e53b6c 0%, #ff9e43 100%);
+  background: -ms-linear-gradient(left, #e53b6c 0%, #ff9e43 100%);
+  background: linear-gradient(to right, #e53b6c 0%, #ff9e43 100%);*/
+}
+
+@media screen and (max-width: 600px) {
+  .container-login fieldset .send,
+  .container-pass fieldset .send {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-login fieldset .send,
+  .container-pass fieldset .send {
+    width: 100%;
+  }
+}
+
+.container-login fieldset a,
+.container-pass fieldset a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 9%;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+  .container-login fieldset a,
+  .container-pass fieldset a {
+    font-size: 16px;
+  }
+}
+
+.container-login fieldset a:hover,
+.container-pass fieldset a:hover {
+  color: #696969;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  z-index: 999;
+}
+
+footer img {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: -1000;
+}
